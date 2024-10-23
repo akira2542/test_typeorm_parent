@@ -6,4 +6,8 @@ export class YourEntityRepository extends Repository<YourEntity> {
     constructor(private entityManager: EntityManager) {
         super(YourEntity, entityManager);
     }
+
+    findAll() {
+        this.find();
+    }
 }
