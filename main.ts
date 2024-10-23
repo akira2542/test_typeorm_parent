@@ -1,3 +1,3 @@
 export function main() {
-    console.log('Hello From Package');
+    console.log('Hello From Package, Hello');
 }
