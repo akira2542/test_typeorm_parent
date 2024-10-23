@@ -1,5 +1,9 @@
 // repositories/YourEntityRepository.ts
-import { AppDataSource } from '../data-source';
+import { EntityManager, Repository } from 'typeorm';
 import { YourEntity } from '../entities/your-entity.entity';
 
-export const YourEntityRepository = AppDataSource.getRepository(YourEntity);
+export class YourEntityRepository extends Repository<YourEntity> {
+    constructor(private entityManager: EntityManager) {
+        super(YourEntity, entityManager);
+    }
+}
